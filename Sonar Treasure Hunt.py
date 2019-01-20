@@ -44,6 +44,7 @@ def drawBoard(board):
     print('   ' + ('0123456789' * 6))
     print(tensDigitsLine)
 
+
 def getRandomChests(numChests):
 
     chests = []
@@ -54,6 +55,8 @@ def getRandomChests(numChests):
             chests.append(newChest)
         return chests
 
+#isOnBoard(x_position, y_position)
+#Ensure that the chosen position is within the dimentions of the board
 def isOnBoard(x, y):
 
     return x >= 0 and x <= 59 and y >= 0 and y <= 14
@@ -81,6 +84,7 @@ def makeMove(board, chests, x, y):
         else:
             board[x][y] = 'X'
             return 'Sonar did not detect anything. All treasure chests out of range.'
+
 
 def enterPlayerMove(previousMoves):
     print('Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)')
